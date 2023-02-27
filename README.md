@@ -10,7 +10,9 @@ Instructions follow below for viewing the dataset locally via R.
 
 # Local Setup
 
-First, download the repository, either from the command line with a command like:
+If R is not already installed, find your closest mirror [here](https://cran.r-project.org/mirrors.html) and follow the instructions for installation; if using RStudio, you can download it from [here](https://posit.co/download/rstudio-desktop/))
+
+Download the repository, either from the command line with a command like:
 
 ```
 git clone https://github.com/markrobinsonuzh/rbm8a-rnaseq-explorer.git
@@ -18,7 +20,7 @@ git clone https://github.com/markrobinsonuzh/rbm8a-rnaseq-explorer.git
 
 or, download a snapshot of the repository using the green `Code` button above (e.g., click on `Download ZIP` and then unzip the files of the repository in a reasonably location locally).
 
-Then, start an R session and set the current working directory to whereever `rbm8a-rnaseq-explorer` was placed. (TIP: you can double-click on the `rbm8a-rnaseq-explorer.Rproj` and an R session will be started with the directory correctly set.)
+Then, start an R session and set the current working directory to where `rbm8a-rnaseq-explorer` was placed. (TIP: if using RStudio, you can double-click on the `rbm8a-rnaseq-explorer.Rproj` file and an R session will be started with the directory correctly set.)
 
 If not already installed, you will need to install the following packages (cut-and-paste into the console):
 
