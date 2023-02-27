@@ -1,3 +1,4 @@
+message("Loading packages.")
 suppressPackageStartupMessages({
   library(shiny)
   library(ggplot2)
@@ -11,6 +12,9 @@ suppressPackageStartupMessages({
   library(circlize)
   library(gridExtra)
 })
+
+
+message("Loading objects.")
 
 topdir <- "./"
 
@@ -117,6 +121,8 @@ comps <- setdiff(colnames(res$dex_w), c("gene_id", "symbol"))
 stopifnot( all(comps %in% colnames(res$suppa_w)) )
 
 
+message("Building app.")
+
 ## Define app
 summary_app <- function(res) {
   options(ucscChromosomeNames=FALSE, envir=.GlobalEnv)
@@ -137,7 +143,7 @@ summary_app <- function(res) {
           width = 12, 
           
           tabPanel("About",
-                   includeMarkdown(paste0(topdir, "shiny/about_app.md"))),
+                   includeMarkdown(paste0(topdir, "about_app.md"))),
           
           tabPanel("PCA",
                    uiOutput("pca.plot.ui"),
@@ -737,4 +743,5 @@ summary_app <- function(res) {
   shinyApp(ui = p_layout, server = server_function, enableBookmarking = "server")
 }
 
+message("Running app.")
 print(summary_app(res))
