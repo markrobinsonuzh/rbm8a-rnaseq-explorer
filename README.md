@@ -39,6 +39,9 @@ To run the app, run:
 source("app.R")
 ```
 
+Note that for the coverage tracks to be displayed, you will need to download 7 BW (bigwig) files from [here](https://doi.org/10.5281/zenodo.7680271) and placed in the `starbigwig` directory.
+
+
 # About (the panels of the app)
 
 ## PCA
